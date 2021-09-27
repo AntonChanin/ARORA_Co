@@ -38,6 +38,11 @@
   }
 }
 .button {
+  border-radius: 50%;
+  &:active {
+    box-shadow:  0 0 0 12px transparent;
+    animation: secondPulse 1s;
+  }
   &__primary {
     background: #CC693E;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.16);
@@ -67,22 +72,19 @@
     color: #CC693E;
 
     transition: 0.3s;
-    &:active {
-      box-shadow:  0 0 0 12px transparent;
-      animation: secondPulse 1s;
-    }
   }
   &_icon {
     width: 24px;
     height: 24px;
     background-color: #0000;
+    padding: initial;
     img {
       width: 24px;
       height: 24px;
     }
   }
   &__close {
-    margin: auto 4px; 
+    margin: auto 4px;
   }
   &_mobile-text {
     display: none;

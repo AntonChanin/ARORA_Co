@@ -55,6 +55,13 @@ body {
   color: #666;
 }
 
+.button {
+  border-radius: 50%;
+}
+.button:active {
+  box-shadow: 0 0 0 12px transparent;
+  animation: secondPulse 1s;
+}
 .button__primary {
   background: #CC693E;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.16);
@@ -81,14 +88,11 @@ body {
   color: #CC693E;
   transition: 0.3s;
 }
-.button__second:active {
-  box-shadow: 0 0 0 12px transparent;
-  animation: secondPulse 1s;
-}
 .button_icon {
   width: 24px;
   height: 24px;
   background-color: #0000;
+  padding: initial;
 }
 .button_icon img {
   width: 24px;
@@ -1271,10 +1275,24 @@ main .main-canvas .recommendations .recoline .reco-item_imgs__lab {
   line-height: 18px;
   bottom: 198px;
 }
+main .main-canvas .recommendations .recoline .reco-item_imgs__lab:hover {
+  animation: jelly 0.5s;
+}
 main .main-canvas .recommendations .recoline .reco-item_imgs__new {
   width: 67px;
   background-color: #E30029;
   color: #fff;
+}
+@keyframes jelly {
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }
 @media (max-width: 678px) {
   main .main-canvas .recommendations {

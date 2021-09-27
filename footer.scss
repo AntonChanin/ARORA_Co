@@ -24,7 +24,6 @@ footer {
       font-size: 14px;
       line-height: 20px;
 
-      /* Base / Black 10 */
       color: #F1F1F1;
 
       & .nav-col {
@@ -106,7 +105,7 @@ footer {
 @media (max-width: 692px) {
   footer {
     max-width: 692px;
-    height: 272px;
+    height: auto;
     .footer-canvas {
       max-width: 692px;
       width: 100%;
@@ -118,15 +117,16 @@ footer {
         .baners {
           flex-direction: row;
         }
-      }
-      .copyright {
-        margin: 32px 0 8px 0;
-        text-align: left !important;
-        max-width: initial;
-        br {
-          display: none;
+        .copyright {
+          margin: 32px 0 8px 0;
+          text-align: left;
+          max-width: initial;
+          br {
+            display: none;
+          }
         }
       }
+      
     }
   }
 }
@@ -159,13 +159,13 @@ footer {
           height: 112px;
           flex-direction: column;
         }
-      }
-      .copyright {
-        margin: 24px 0 8px 0;
-        text-align: left !important;
-        max-width: 320px;
-        br {
-          display: none;
+        .copyright {
+          margin: 24px 0 8px 0;
+          text-align: left;
+          max-width: 320px;
+          br {
+            display: none;
+          }
         }
       }
     }

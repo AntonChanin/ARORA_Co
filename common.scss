@@ -10,9 +10,6 @@
   line-height: 44px;
   margin: 24px 0 40px 0;
 
-  /* identical to box height, or 147% */
-
-  /* Base / Black 80 */
   color: #333;
   &__second {
     margin: auto;
@@ -34,12 +31,8 @@
   font-size: 18px;
   line-height: 24px;
 
-  /* identical to box height, or 133% */
-
-  /* Base / Black 100 */
   color: #000;
 
-  /* Inside Auto Layout */
   flex: none;
   flex-grow: 0;
   margin: 16px 0px;
@@ -61,8 +54,6 @@
 .button {
   &__primary {
     background: #CC693E;
-    border: 0;
-    outline: 0;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
     border-radius: 40px;
     
@@ -72,7 +63,6 @@
     font-size: 18px;
     line-height: 24px;
 
-    /* Base / White */
     color: #fff;
     .button__old-price {
       color: #ccc;
@@ -91,8 +81,6 @@
   &_icon {
     width: 24px;
     height: 24px;
-    border: 0;
-    outline: 0;
     background-color: #0000;
     img {
       width: 24px;
@@ -127,7 +115,6 @@
   width: 100%;
   height: 2px;
 
-  /* Base / Black 30 */
   background: #B3B3B3;
 }
 

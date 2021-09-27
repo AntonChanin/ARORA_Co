@@ -83,24 +83,32 @@
         font-size: 12px;
         line-height: 16px;
       }
+      .promocard_promo {
+        max-width: initial;
+        width: auto;
+        flex-wrap: wrap;
+        .h3-title {    
+          max-width: initial;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: right;     
+          &.promocard_promocode {
+            text-align: left;
+            font-size: 22px;
+            line-height: 32px;
+            margin: 32px 0 16px 0;
+          } 
+        }
+      }
       .h3-title {
         max-width: initial;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;
-        text-align: right;
-        &.promocard_promocode {
-          text-align: left;
-          font-size: 22px;
-          line-height: 32px;
-          margin: 32px 0 16px 0 !important;
-        }
-      }
-      .promocard_promo {
-        max-width: initial;
-        width: auto;
-        flex-wrap: wrap;
+        text-align: right;      
       }
     }
   }

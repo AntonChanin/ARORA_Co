@@ -1,0 +1,16 @@
+{
+  "name": "arora_co",
+  "version": "1.0.0",
+  "description": "arora_co test task",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "html",
+    "scss"
+  ],
+  "author": "AVH",
+  "license": "ISC"
+}

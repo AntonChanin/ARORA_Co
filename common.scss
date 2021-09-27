@@ -1,10 +1,4 @@
-.hidden {
-  display: none !important;
-}
-
 .h2-title {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 44px;
@@ -17,16 +11,12 @@
   }
 }
 .h3-title {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 22px;
   line-height: 32px;
   color: #333;
 }
 .h4-title {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -35,13 +25,9 @@
 
   flex: none;
   flex-grow: 0;
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 .article {
-  /* Body / Body */
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   &__primary {
@@ -54,16 +40,18 @@
 .button {
   &__primary {
     background: #CC693E;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.16);
     border-radius: 40px;
     
-    font-family: Roboto Slab;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
 
     color: #fff;
+    &:active {
+      box-shadow: 0 0 0 12px transparent;
+      animation: pulse 1s;
+    }
     .button__old-price {
       color: #ccc;
       text-decoration-line: line-through;
@@ -73,10 +61,16 @@
     background-color: #fff;
     border: 2px solid #CC693E;
     box-sizing: border-box;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.16);
     border-radius: 40px;
 
     color: #CC693E;
+
+    transition: 0.3s;
+    &:active {
+      box-shadow:  0 0 0 12px transparent;
+      animation: secondPulse 1s;
+    }
   }
   &_icon {
     width: 24px;
@@ -94,6 +88,19 @@
     display: none;
   }
 }
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0#CC693E;
+  }
+}
+
+@keyframes secondPulse {
+  from {
+    box-shadow: 0 0 0 0#ccc;
+  }
+}
+
 .hr-circle {
   max-width: 166px;
   width: 100%;
@@ -117,23 +124,3 @@
 
   background: #B3B3B3;
 }
-
-.section {
-  scrollbar-color: #fff #666;
-  scrollbar-width: thin;
-  &::-webkit-scrollbar {
-    width: 16px;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: #666;
-    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border: 2px solid #666;
-    border-radius: 8px;
-  }
-}
-
-

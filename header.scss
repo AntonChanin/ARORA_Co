@@ -30,9 +30,6 @@ header {
       & .loc_title {
         height: 50%;
         & span {
-          font-family: Roboto Slab;
-          font-style: normal;
-          font-weight: normal;
           font-size: 12px;
           line-height: 16px;
           color: #808080;
@@ -43,8 +40,6 @@ header {
         }
       }
         & b.loc_phone {
-          font-family: Roboto Slab;
-          font-style: normal;
           font-weight: 500;
           font-size: 18px;
           line-height: 24px;
@@ -167,6 +162,7 @@ header {
     max-width: 320px;
     height: 129px;
     margin: auto;
+    width: 100%;
     .header-canvas {
       width: auto;
       flex-wrap: wrap;
@@ -190,7 +186,7 @@ header {
         .button__primary {
           width: 123px;
           height: 40px;
-          border-radius: 25px 0px 0px 25px;
+          border-radius: 25px 0 0 25px;
           font-weight: 700;
           font-size: 14px;
           box-shadow: none;

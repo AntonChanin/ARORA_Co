@@ -44,3 +44,8 @@ sizeToggler(midSize, 'mid-size');
 sizeToggler(smallSize, 'small-size');
 qualityToggler(lightQuality, 'light-quality');
 qualityToggler(trueQuality, 'true-quality');
+
+const ingredients = document.getElementById('ingredients');
+new GeminiScrollbar({
+  element: ingredients
+}).create();

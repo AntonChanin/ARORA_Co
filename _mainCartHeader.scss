@@ -9,8 +9,6 @@
     width: 130px;
     height: 44px;
     
-    font-family: Roboto Slab;
-    font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 44px;
@@ -33,6 +31,23 @@
   }
 }
 
+@media (max-width: 375px) {
+  .cart-header {
+    .hr-circle {
+      margin: 22px 0;
+    }
+    h2.h2-title.h2-title__second.h2-title__done {
+      min-width: 60px;
+    }
+    &_title-cart, .h2-title__second {
+      font-size: 14px;
+      line-height: 28px;
+      height: 28px;
+      margin: 10px auto;
+    }
+  }
+}
+
 @media (max-width: 321px) {
   .cart-header {
     align-items: center;
@@ -43,15 +58,6 @@
     height: auto;
     .hr-circle {
       margin: 8px 0;
-    }
-    h2.h2-title.h2-title__second.h2-title__done {
-      min-width: 60px;
-    }
-    &_title-cart, .h2-title__second {
-      font-size: 14px;
-      line-height: 28px;
-      height: 28px;
-      margin: 10px auto;
     }
   }
 }

@@ -4,6 +4,9 @@ body {
   flex-direction: column;
   max-width: 1440px;
   margin: auto;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
 }
 
 @media (max-width: 320px) {
@@ -12,13 +15,7 @@ body {
     max-width: 1278px;
   }
 }
-.hidden {
-  display: none !important;
-}
-
 .h2-title {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 44px;
@@ -31,8 +28,6 @@ body {
 }
 
 .h3-title {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 22px;
   line-height: 32px;
@@ -40,22 +35,16 @@ body {
 }
 
 .h4-title {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   color: #000;
   flex: none;
   flex-grow: 0;
-  margin: 16px 0px;
+  margin: 16px 0;
 }
 
 .article {
-  /* Body / Body */
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
 }
@@ -68,14 +57,16 @@ body {
 
 .button__primary {
   background: #CC693E;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.16);
   border-radius: 40px;
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   color: #fff;
+}
+.button__primary:active {
+  box-shadow: 0 0 0 12px transparent;
+  animation: pulse 1s;
 }
 .button__primary .button__old-price {
   color: #ccc;
@@ -85,9 +76,14 @@ body {
   background-color: #fff;
   border: 2px solid #CC693E;
   box-sizing: border-box;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.16);
   border-radius: 40px;
   color: #CC693E;
+  transition: 0.3s;
+}
+.button__second:active {
+  box-shadow: 0 0 0 12px transparent;
+  animation: secondPulse 1s;
 }
 .button_icon {
   width: 24px;
@@ -105,6 +101,16 @@ body {
   display: none;
 }
 
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 #CC693E;
+  }
+}
+@keyframes secondPulse {
+  from {
+    box-shadow: 0 0 0 0 #ccc;
+  }
+}
 .hr-circle {
   max-width: 166px;
   width: 100%;
@@ -127,24 +133,6 @@ body {
   width: 100%;
   height: 2px;
   background: #B3B3B3;
-}
-
-.section {
-  scrollbar-color: #fff #666;
-  scrollbar-width: thin;
-}
-.section::-webkit-scrollbar {
-  width: 16px;
-}
-.section::-webkit-scrollbar-track {
-  background-color: #666;
-  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 12px;
-}
-.section::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border: 2px solid #666;
-  border-radius: 8px;
 }
 
 header {
@@ -184,9 +172,6 @@ header .header-canvas .locs-list .loc .loc_title {
   height: 50%;
 }
 header .header-canvas .locs-list .loc .loc_title span {
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #808080;
@@ -196,8 +181,6 @@ header .header-canvas .locs-list .loc .loc_title span a {
   color: #CC693E;
 }
 header .header-canvas .locs-list .loc b.loc_phone {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -299,6 +282,7 @@ header .header-canvas .locs-list .loc b.loc_phone {
     max-width: 320px;
     height: 129px;
     margin: auto;
+    width: 100%;
   }
   header .header-canvas {
     width: auto;
@@ -325,7 +309,7 @@ header .header-canvas .locs-list .loc b.loc_phone {
   header .header-canvas .colapse-icons .button__primary {
     width: 123px;
     height: 40px;
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 25px 0 0 25px;
     font-weight: 700;
     font-size: 14px;
     box-shadow: none;
@@ -371,8 +355,6 @@ main .main-canvas .cart-header {
 main .main-canvas .cart-header_title-cart {
   width: 130px;
   height: 44px;
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 30px;
   line-height: 44px;
@@ -389,6 +371,20 @@ main .main-canvas .cart-header_title-cart {
     text-overflow: ellipsis;
   }
 }
+@media (max-width: 375px) {
+  main .main-canvas .cart-header .hr-circle {
+    margin: 22px 0;
+  }
+  main .main-canvas .cart-header h2.h2-title.h2-title__second.h2-title__done {
+    min-width: 60px;
+  }
+  main .main-canvas .cart-header_title-cart, main .main-canvas .cart-header .h2-title__second {
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
+    margin: 10px auto;
+  }
+}
 @media (max-width: 321px) {
   main .main-canvas .cart-header {
     align-items: center;
@@ -400,15 +396,6 @@ main .main-canvas .cart-header_title-cart {
   }
   main .main-canvas .cart-header .hr-circle {
     margin: 8px 0;
-  }
-  main .main-canvas .cart-header h2.h2-title.h2-title__second.h2-title__done {
-    min-width: 60px;
-  }
-  main .main-canvas .cart-header_title-cart, main .main-canvas .cart-header .h2-title__second {
-    font-size: 14px;
-    line-height: 28px;
-    height: 28px;
-    margin: 10px auto;
   }
 }
 main .main-canvas .cart-body {
@@ -423,10 +410,8 @@ main .main-canvas .cart-body_ord-item {
   justify-content: space-between;
   width: auto;
   height: 215px;
-  /* Base / Black 10 */
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   border-radius: 8px;
-  /* Inside Auto Layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -437,7 +422,7 @@ main .main-canvas .cart-body_ord-item .ord-item {
 }
 main .main-canvas .cart-body_ord-item .ord-item_img {
   background-size: auto 215px;
-  background-position: -80px 0px;
+  background-position: -80px 0;
   background-repeat: no-repeat;
   min-width: 185px;
   max-width: 185px;
@@ -454,14 +439,15 @@ main .main-canvas .cart-body_ord-item .ord-item_lab {
   display: inherit;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.24), 0px 6px 16px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.24), 0 6px 16px rgba(0, 0, 0, 0.32);
   border-radius: 16px;
   margin: 16px auto 0 16px;
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+}
+main .main-canvas .cart-body_ord-item .ord-item_lab:hover {
+  animation: jelly 0.5s;
 }
 main .main-canvas .cart-body_ord-item .ord-item_hidden {
   background-color: #0000;
@@ -508,16 +494,12 @@ main .main-canvas .cart-body_ord-item .ord-item_footer__price {
   align-self: center;
   align-items: center;
   flex-direction: column;
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;
   color: #ccc;
 }
 main .main-canvas .cart-body_ord-item .ord-item_footer__price b {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
@@ -525,34 +507,44 @@ main .main-canvas .cart-body_ord-item .ord-item_footer__price b {
 }
 main .main-canvas .cart-body_ord-item .ord-item_footer__counter {
   display: inherit;
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
 }
-main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub {
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_val {
   background: #fff;
   border: 2px solid #CC693E;
   box-sizing: border-box;
-  border-right: 0;
-  border-radius: 30px 0px 0px 30px;
+}
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub {
   width: 40px;
   height: 48px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add::before, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub::before {
+  background-color: #f1f1f1;
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(0);
+  transition: 0.3s;
+}
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add:hover, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub:hover {
+  background: transparent;
+}
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add:hover::before, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub:hover::before {
+  transform: translate(-50%, -50%) rotate(-45deg) scaleX(1);
+}
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add:active, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub:active {
+  animation: lineJelly 0.5s;
+}
+main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub {
+  border-right: 0;
+  border-radius: 30px 0 0 30px;
 }
 main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add {
-  background: #fff;
-  border: 2px solid #CC693E;
-  box-sizing: border-box;
   border-left: 0;
-  border-radius: 0px 30px 30px 0px;
-  width: 40px;
-  height: 48px;
+  border-radius: 0 30px 30px 0;
 }
 main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_val {
-  background: #fff;
-  border: 2px solid #CC693E;
-  box-sizing: border-box;
   width: 52px;
   height: 48px;
   display: inherit;
@@ -581,6 +573,28 @@ main .main-canvas .cart-body_bonus {
 main .main-canvas .cart-body_bonus .cart_ord-item {
   display: inherit;
 }
+@keyframes jelly {
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+@keyframes lineJelly {
+  25% {
+    transform: scale(1.1, 1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  75% {
+    transform: scale(1.05, 1);
+  }
+}
 @media (max-width: 992px) {
   main .main-canvas .cart-body {
     max-width: initial;
@@ -603,7 +617,7 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
     margin: 0 0 8px 0;
     max-height: 60px;
     background-color: #fff;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.16);
     border-radius: 0;
   }
   main .main-canvas .cart-body_ord-item .ord-item {
@@ -640,8 +654,6 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
     display: none;
   }
   main .main-canvas .cart-body_ord-item .ord-item_desc .ord-item_header .h3-title {
-    font-family: Roboto Slab;
-    font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -662,19 +674,17 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__counter {
     align-items: center;
-    font-family: Roboto Slab;
     margin: 0 0 0 15px;
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub {
     width: 26px;
-    border-radius: 30px 0px 0px 30px;
+    border-radius: 30px 0 0 30px;
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_val {
     height: 32px;
     background-color: #fff;
     /* Brand / Main 100 */
     box-sizing: border-box;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -697,8 +707,6 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
     text-decoration-line: line-through;
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__price span, main .main-canvas .cart-body_ord-item .ord-item_footer__price b {
-    font-family: Roboto Slab;
-    font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -731,7 +739,7 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
     margin: 0 0 8px 0;
     max-height: 60px;
     background-color: #fff;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.16);
     border-radius: 0;
   }
   main .main-canvas .cart-body_ord-item .ord-item_img {
@@ -766,9 +774,6 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
     display: none;
   }
   main .main-canvas .cart-body_ord-item .ord-item_desc .ord-item_header .h3-title {
-    font-family: Roboto Slab;
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
     display: flex;
@@ -788,23 +793,19 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__counter {
     align-items: center;
-    font-family: Roboto Slab;
     margin: 0 0 0 15px;
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub {
     width: 26px;
-    border-radius: 30px 0px 0px 30px;
+    border-radius: 30px 0 0 30px;
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_sub, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_add, main .main-canvas .cart-body_ord-item .ord-item_footer__counter .counter_val {
     height: 32px;
     background-color: #fff;
-    /* Brand / Main 100 */
     box-sizing: border-box;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
     display: flex;
     align-items: center;
     text-align: center;
@@ -823,8 +824,6 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
     text-decoration-line: line-through;
   }
   main .main-canvas .cart-body_ord-item .ord-item_footer__price span, main .main-canvas .cart-body_ord-item .ord-item_footer__price b {
-    font-family: Roboto Slab;
-    font-style: normal;
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
@@ -851,7 +850,7 @@ main .main-canvas .cart-body_bonus .cart_ord-item {
 main .main-canvas .promocard {
   max-width: 411px;
   max-height: 597px;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
 }
 main .main-canvas .promocard-canvas {
@@ -867,9 +866,6 @@ main .main-canvas .promocard-canvas .article {
   max-width: 331px;
 }
 main .main-canvas .promocard-canvas .promocard_promo {
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
@@ -891,12 +887,10 @@ main .main-canvas .promocard-canvas .promocard_promo .button__second {
   margin: 16px 0 0 calc(100% - 160px);
 }
 main .main-canvas .promocard-canvas .promocard_sum {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  margin: 40px 0px;
+  margin: 40px 0;
 }
 main .main-canvas .promocard-canvas .promocard_sum__old-price {
   color: #ccc;
@@ -926,8 +920,6 @@ main .main-canvas .promocard-canvas .button__primary {
     margin: 0;
   }
   main .main-canvas .promocard-canvas .article {
-    font-style: normal;
-    font-weight: normal;
     font-size: 12px;
     line-height: 16px;
   }
@@ -938,7 +930,6 @@ main .main-canvas .promocard-canvas .button__primary {
   }
   main .main-canvas .promocard-canvas .promocard_promo .h3-title {
     max-width: initial;
-    font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -952,7 +943,6 @@ main .main-canvas .promocard-canvas .button__primary {
   }
   main .main-canvas .promocard-canvas .h3-title {
     max-width: initial;
-    font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
@@ -981,7 +971,10 @@ main .main-canvas .product-card {
   justify-content: center;
   position: fixed;
   z-index: 2;
-  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.35)) drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.28));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0 1px 5px rgba(0, 0, 0, 0.35)) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.28));
+}
+main .main-canvas .product-card.hidden {
+  display: none;
 }
 main .main-canvas .product-card_body {
   max-width: 820px;
@@ -989,7 +982,7 @@ main .main-canvas .product-card_body {
   height: 515px;
   padding: 40px 40px 45px 40px;
   background-color: #fff;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
   display: inherit;
   flex-direction: row;
@@ -1004,7 +997,7 @@ main .main-canvas .product-card_main-setting .product-card_setting {
   width: 428px;
   height: 40px;
   background-color: #F5E1D8;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.16), inset 0px 2px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.16), inset 0 2px 4px rgba(0, 0, 0, 0.16);
   border-radius: 30px;
   display: inherit;
   justify-content: space-around;
@@ -1017,7 +1010,7 @@ main .main-canvas .product-card_main-setting .product-card_setting-val {
 }
 main .main-canvas .product-card_main-setting .product-card_setting-val-selector {
   background-color: #fff;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 1px 5px rgba(0, 0, 0, 0.35), 0px 6px 16px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(0, 0, 0, 0.35), 0 6px 16px rgba(0, 0, 0, 0.28);
   border-radius: 35px;
   position: absolute;
   z-index: 0;
@@ -1061,33 +1054,25 @@ main .main-canvas .product-card_ingredients {
   overflow: auto;
 }
 main .main-canvas .product-card_ingredients-title {
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  /* Base / Black 100 */
   color: #000;
   margin: 23px 0 15px 0;
 }
 main .main-canvas .product-card_ingredients .ingredient-item {
-  max-width: 312px;
+  max-width: 296px;
   width: auto;
   height: 24px;
   margin: 0 19px 16px 5px;
   background-color: #fff;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.16);
   border-radius: 50px;
   padding: 8px;
   display: inherit;
   justify-content: space-between;
   align-items: center;
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-  /* Base / Black 80 */
   color: #333333;
 }
 main .main-canvas .product-card_ingredients .ingredient-item_first-group {
@@ -1278,11 +1263,9 @@ main .main-canvas .recommendations .recoline .reco-item_imgs__lab {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.24), 0px 6px 16px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.24), 0 6px 16px rgba(0, 0, 0, 0.32);
   border-radius: 16px;
   margin: 16px;
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -1314,8 +1297,6 @@ main .main-canvas .summary_body .hr-default {
   margin: 64px auto auto auto;
 }
 main .main-canvas .summary_sum {
-  font-family: Roboto Slab;
-  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -1371,8 +1352,6 @@ main .main-canvas .summary_sum__old-price {
     display: none;
   }
   main .main-canvas .summary_sum__button-wrapper .button_mobile-text {
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
     width: auto;
@@ -1418,13 +1397,10 @@ footer .footer-canvas .nav-grid {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0px;
+  padding: 0;
   max-width: 636px;
   width: 100%;
   height: 132px;
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: #F1F1F1;
@@ -1432,9 +1408,6 @@ footer .footer-canvas .nav-grid {
 footer .footer-canvas .nav-grid .nav-col {
   max-width: 186px;
   width: 100%;
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
 }
@@ -1447,13 +1420,10 @@ footer .footer-canvas .offer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   max-width: 454.66px;
   width: 100%;
   height: 105px;
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #fff;
@@ -1472,7 +1442,7 @@ footer .footer-canvas .offer .baners .visa {
 footer .footer-canvas .offer .baners .master-card {
   max-width: 64px;
   height: 40px;
-  margin: auto 16px 8px 0 0;
+  margin: auto 14px 8px 0;
 }
 footer .footer-canvas .offer .baners .google-play {
   max-width: 135px;
@@ -1487,9 +1457,6 @@ footer .footer-canvas .offer .baners .apple-store {
 footer .footer-canvas .offer .copyright {
   width: 100%;
   text-align: right;
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
   font-size: 10px;
   line-height: 12px;
 }

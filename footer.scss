@@ -1,0 +1,163 @@
+$baners-margin: auto 16px 8px 0;
+
+footer {
+  display: inherit;
+  height: 196px;
+  background-color: #1a1a1a;
+  .footer-canvas {
+    width: 100%;
+    margin: 32px 64px;
+    display: inherit;
+    justify-content: space-between;
+    .nav-grid {
+      display: inherit;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0;
+
+      max-width: 636px;
+      width: 100%;
+      height: 132px;
+      
+      font-size: 14px;
+      line-height: 20px;
+
+      color: #F1F1F1;
+
+      & .nav-col {
+        max-width: 186px;
+        width: 100%;
+        font-size: 12px;
+        line-height: 16px;
+        & li {
+          list-style-type: none;
+          margin: 0 0 8px 0;
+        }
+      }
+    }
+
+    .offer {
+      display: inherit;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+
+      max-width: 454.66px;
+      width: 100%;
+      height: 105px;
+
+      font-size: 12px;
+      line-height: 16px;
+
+      color: #fff;
+      .baners {
+        display: inherit;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        .visa {
+          max-width: 88px;
+          height: 28px;
+          margin: $baners-margin;
+        }
+        .master-card {
+          max-width: 64px;
+          height: 40px;
+          margin: auto 14px 8px 0;
+        }
+        .google-play {
+          max-width: 135px;
+          height: 40px;
+          margin: $baners-margin;
+        }
+        .apple-store {
+          max-width: 117.92px;
+          height: 38.25px;
+          margin: 0 0 8px 0;
+        }
+      }
+      .copyright {
+        width: 100%;
+        text-align: right;
+        font-size: 10px;
+        line-height: 12px;
+        & a {
+          text-decoration: 0;
+          color: #CC693E;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 692px) {
+  footer {
+    max-width: 692px;
+    height: auto;
+    .footer-canvas {
+      max-width: 692px;
+      width: 100%;
+      flex-direction: column;
+      margin: 16px;
+      .offer {
+        height: auto;
+        max-width: initial;
+        .baners {
+          flex-direction: row;
+        }
+        .copyright {
+          margin: 32px 0 8px 0;
+          text-align: left;
+          max-width: initial;
+          br {
+            display: none;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  footer {
+    max-width: 320px;
+    height: 572px;
+    .footer-canvas {
+      max-width: 288px;
+      width: auto;
+      flex-direction: column;
+      margin: 16px;
+      .nav-grid {
+        max-height: 352px;
+        width: auto;
+        height: auto;
+        flex-wrap: wrap;
+        .nav-col {
+          max-width: 130px;
+          margin: 0 0 16px 0;
+          & li {
+            margin: 0 0 16px 0;
+          }
+        }
+      }
+      .offer {
+        height: auto;
+        .baners {
+          height: 112px;
+          flex-direction: column;
+        }
+        .copyright {
+          margin: 24px 0 8px 0;
+          text-align: left;
+          max-width: 320px;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

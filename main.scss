@@ -1,0 +1,40 @@
+main {
+  display: inherit;
+  flex-wrap: wrap;
+  .main-canvas {
+    max-width: initial;
+    width: calc(100% - 128px);
+    display: inherit;
+    flex-wrap: inherit;
+    justify-content: space-between;
+    margin: 0 64px;
+    @import '_mainCartHeader.scss';
+    @import '_mainCartBody.scss';
+    @import '_mainPromocard.scss';
+    @import '_mainProductCard.scss';
+    @import '_mainReco.scss';
+    @import '_mainSummary.scss';
+  }
+}
+
+@media (max-width: 992px) {
+  main {
+    .main-canvas {
+      max-width: initial;
+      width: calc(100% - 32px);
+      margin: 0 16px;
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  main {
+    height: 1052px;
+    justify-content: center;
+    .main-canvas {
+      width: 100%;
+      margin: 0;      
+    }
+  }
+}
+
